@@ -1,0 +1,31 @@
+.sidebar{
+    background-color: $color-primary;
+    grid-row: 1 / -1;
+    grid-column: sidebar-start / sidebar-end;
+    display: grid;
+    justify-items: center;
+
+    & .nav-button{
+        border: none;
+        background-color: $color-white;
+        width: 4.5rem;
+        height: 0.2rem;
+        margin-top: 4rem;
+
+        &::before, &::after{
+            content: "";
+            background-color: $color-white;
+            width: 4.5rem;
+            height: 0.2rem;
+            display: block;
+        }
+
+        &::before{
+            transform: translateY(-1.5rem);
+        }
+
+        &::after{
+            transform: translateY(1.3rem);
+        }
+    }
+}
